@@ -1,4 +1,4 @@
-## SISTEMA DE COBRANÇA POR E-MAIL
+## 💵 SISTEMA DE COBRANÇA POR E-MAIL
 
 Obs.: Esse sistema é uma réplica do projeto do canal no youtube - @andrevercosaa
 ele não disponibiliza o código para copiar e colar e a pessoa laterar, tive que capturar tudo 
