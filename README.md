@@ -22,6 +22,37 @@ enviadas por e-mail isso ajudou muito esse processo, assim ela ganho destaque, e
 </p>
 
 
+## OS NODES (CONFIGURAÇÕES POR DENTRO)
+
+- WEBHOOK1 - 
+    - METHOD - POST
+    - PATH - (QUALQUER NOME)
+    - AUTHENTICATION - NONE
+    - RESPOND - USING RESPOND TO WEBHOOK NODE
+
+- HTML1 -
+    - OPERATION - GENERATE HTML TEMPLATE
+    - (COPIE O CÓDIGO 1)
+
+- RESPOND WEBHOOK1 - 
+    - RESPOND WITH - TEXT
+    - RESPONSE BODY - {{ $json.html }}
+ 
+- EXTRACT | XLSX,XLS -
+    -  OPERATION - FROM XLSX
+    -  INPUT BINARY FIELD - FILES
+ 
+- EXTRACT | CSV -
+    - OPERATION - CSV
+    - INPUT BINARY FIELD - FILES
+ 
+- HTML2 -
+    - OPERATION - GENERATE HTML TEMPLATE
+    - (COPIE O CÓDIGO 2)
+ 
+    - 
+
+
 ## 🤖 O Código dá página 1 a principal
 (Aqui é onde vc vai puxar e arrasta, ou busca o arquivo em CSV, XLS ou XLSX)
 ** esse códico vc vai copiar e colar dentro do HTML1 no n8n**
