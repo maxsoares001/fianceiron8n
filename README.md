@@ -22,7 +22,7 @@ enviadas por e-mail isso ajudou muito esse processo, assim ela ganho destaque, e
 </p>
 
 
-## 🤖 O Código dá página 1 a principal 
+## 🤖 O Código dá página 1 a principal
 (Aqui é onde vc vai puxar e arrasta, ou busca o arquivo em CSV, XLS ou XLSX)
 ** esse códico vc vai copiar e colar dentro do HTML1 no n8n**
 ```Html
@@ -313,4 +313,215 @@ document.addEventListener('DOMContentLoaded', () => new FileUploadApp());
 </body>
 </html>
 
+```
+
+## 🤖 O Código de como vai chegar no email da pessoa cobrada.
+** esse códico vc vai copiar e colar dentro do HTML2 no n8n**
+```Html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Lembrete de Pagamento</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f1f5f9;
+  padding: 20px;
+  color: #1a202c;
+}
+
+.email-container {
+  max-width: 650px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* HEADER */
+.header {
+  background: #f8fafc;
+  padding: 40px;
+  text-align: center;
+}
+
+.greeting {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 10px;
+  color: #475569;
+}
+
+/* CONTENT */
+.content {
+  padding: 40px;
+}
+
+.intro-text {
+  font-size: 16px;
+  color: #374151;
+  margin-bottom: 30px;
+}
+
+/* CARD */
+.payment-card {
+  border: 2px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 30px;
+  background: #fafafa;
+}
+
+.payment-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.detail-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+.detail-value {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.amount {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.amount .detail-value {
+  font-size: 26px;
+  font-weight: 700;
+  color: #dc2626;
+}
+
+/* NOTICE */
+.notice-text {
+  margin-top: 25px;
+  font-size: 15px;
+  color: #374151;
+  text-align: center;
+}
+
+/* SUPPORT */
+.support-text {
+  margin-top: 30px;
+  font-size: 15px;
+  text-align: center;
+  color: #374151;
+}
+
+/* FOOTER */
+.footer {
+  background: #f8fafc;
+  padding: 30px;
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+}
+
+.company-info {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.company-name {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 640px) {
+  .payment-details {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="email-container">
+
+  <div class="header">
+    <h1 class="greeting">Olá, {{ $json["Nome do Cliente"] }}</h1>
+    <p class="subtitle">Temos uma pendência para resolver juntos</p>
+  </div>
+
+  <div class="content">
+
+    <p class="intro-text">
+      Identificamos um pagamento pendente em sua conta. Preparamos todas as informações para facilitar a regularização.
+    </p>
+
+    <div class="payment-card">
+      <div class="payment-details">
+
+        <div>
+          <div class="detail-label">Número do Pedido</div>
+          <div class="detail-value">{{ $json["Nº Pedido"] }}</div>
+        </div>
+
+        <div>
+          <div class="detail-label">Data de Vencimento</div>
+          <div class="detail-value">{{ $json.Vencimento }}</div>
+        </div>
+
+        <div class="amount">
+          <div class="detail-label">Valor Total</div>
+          <div class="detail-value">R$ {{ $json["Valor (R$)"] }}</div>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="notice-text">
+      Se o pagamento já foi realizado, pode desconsiderar este lembrete.
+    </p>
+
+    <p class="support-text">
+      Nossa equipe está sempre disponível para ajudar.<br>
+      Valorizamos sua confiança e buscamos sempre a melhor experiência.
+    </p>
+
+  </div>
+
+  <div class="footer">
+    <div class="company-info">
+      <div class="company-name">Max Lab Informática</div>
+      CNPJ 44.838.794/0001-32<br>
+      Rua do conselho, 20 - Jaboatão dos Guararapes/PE<br>
+      maxlabinformatica@gmail.com<br>
+      Whatsapp, (81)99717-6477<b></b>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
 ```
