@@ -8,9 +8,9 @@ enviadas por e-mail isso ajudou muito nesse processo, assim ela ganhou destaque,
 
 ## A MONTAGEM DO SISTEMA -
 
-1 - Você vai precisar de uma VPS com n8n rodando ou um self-host como eu.
-2 - Hospedagem na própria VPS ou aqui mesmo no Github, para qualquer pessoa como link acessar o sistema de cobranças.
-3 - Criar uma planilha no google sheet (planilhas)
+1 - Você vai precisar de uma VPS com n8n rodando ou um self-host como eu.\n
+2 - Hospedagem na própria VPS ou aqui mesmo no Github, para qualquer pessoa como link acessar o sistema de cobranças.\n
+3 - Criar uma planilha no google sheet (planilhas)\n
 
 
 -- As colunas ficam a gosto os nomes, mas mudando os nomes precisa mudar dentro do código!
