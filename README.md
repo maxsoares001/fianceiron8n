@@ -306,7 +306,7 @@ class FileUploadApp {
             formData.append('automation', document.getElementById('automation').value);
 
             // Chamada para o Webhook do n8n
-            const response = await fetch('https://n8n.maxlabinformatica.com.br/webhook/fin', {
+            const response = await fetch('A URL DO SEU WEBHOOK', {
                 method: 'POST',
                 body: formData // O navegador define automaticamente o Content-Type como multipart/form-data
             });
