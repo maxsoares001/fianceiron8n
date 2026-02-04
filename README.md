@@ -53,6 +53,10 @@ enviadas por e-mail isso ajudou muito esse processo, assim ela ganho destaque, e
       Obs.: copie e cole a url do seu wenhook no primeiro código, para poder funcionar, inspecione o código
       e procure onde colar essa url.
 
+      Outra coisa para as pessoas terem acesso, será necessário criar um repositório aqui no github, e hospedar apenas esse
+      primeiro código HTML, depois vc vai em github pages e publica essa sua página e com o link gerado as pessoas podem acessar
+      e utilizar seu projeto, ou vc pode ter o tailscale no seu servidor e ter um ip externo para acesso restrito.
+
 
 ## 🤖 O Código dá página 1 a principal
 (Aqui é onde vc vai puxar e arrasta, ou busca o arquivo em CSV, XLS ou XLSX)
@@ -349,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => new FileUploadApp());
 ## ESSA É A IMAGEM QUE AS PESSOAS VÃO RECEBER NO E-MAIL
 
 <p align="left">
-  <img src="img/EMAIL.png" width="50%">
+  <img src="img/email.png" width="50%">
 </p>
 
 ## 🤖 O Código de como vai chegar no email da pessoa cobrada.
