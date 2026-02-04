@@ -349,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => new FileUploadApp());
 ## ESSA É A IMAGEM QUE AS PESSOAS VÃO RECEBER NO E-MAIL
 
 <p align="left">
-  <img src="img/n8n.png" width="50%">
+  <img src="img/EMAIL.png" width="50%">
 </p>
 
 ## 🤖 O Código de como vai chegar no email da pessoa cobrada.
