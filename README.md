@@ -50,7 +50,8 @@ enviadas por e-mail isso ajudou muito esse processo, assim ela ganho destaque, e
     - OPERATION - GENERATE HTML TEMPLATE
     - (COPIE O CÓDIGO 2)
  
-    - 
+      Obs.: copie e cole a url do seu wenhook no primeiro código, para poder funcionar, inspecione o código
+      e procure onde colar essa url.
 
 
 ## 🤖 O Código dá página 1 a principal
@@ -345,6 +346,11 @@ document.addEventListener('DOMContentLoaded', () => new FileUploadApp());
 </html>
 
 ```
+## ESSA É A IMAGEM QUE AS PESSOAS VÃO RECEBER NO E-MAIL
+
+<p align="left">
+  <img src="img/n8n.png" width="50%">
+</p>
 
 ## 🤖 O Código de como vai chegar no email da pessoa cobrada.
 ** esse códico vc vai copiar e colar dentro do HTML2 no n8n**
